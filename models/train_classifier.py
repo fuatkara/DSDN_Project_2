@@ -133,6 +133,15 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
 
 def save_model(model, model_filepath):
+    """Function to save trained model as a pickle file. 
+    
+    Args: 
+        model: trained model.
+        model_filepath: preferred name for saving model.
+    Returns:
+        None
+    
+    """
     
     pickle.dump(model,open(model_filepath,'wb'))
 
