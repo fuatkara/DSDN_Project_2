@@ -49,7 +49,7 @@ def load_data(database_filepath):
     
     # load data from database
     engine = create_engine('sqlite:///'+ database_filepath)
-    df = pd.read_sql('clean_data_ds',con=engine)
+    df = pd.read_sql('clean_data',con=engine)
     # allocate the feature and target variables to X and y
     X = df['message']
     y = df[df.columns[5:]]
